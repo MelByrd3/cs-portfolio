@@ -1,0 +1,74 @@
+body {
+        background-image:url("http://i.imgur.com/bpU33mU.jpg");
+        font-family:georgia;
+    }
+    p {
+        color:white;
+        text-align:center;
+        font-family:georgia;
+        font-size:20px;
+    }
+
+    h1 {
+        font-family:georgia;
+        text-align:center;
+         color:gold;
+        text-shadow: 2px 2px 5px white;
+    }
+        
+        img {
+        height:400px;Width:950px;
+        text-align:center;
+    }
+    a {
+        text-align:center;
+        font-size:30px;
+        color:gold;
+        margin:10px;
+        /*border: 2px solid black ;*/
+        /*padding: 10px;*/
+        text-decoration:none;
+    }
+    #navbar {
+        text-align:center;
+        text-shadow: 2px 2px 5px white;
+        margin-bottom:25px;
+    }
+    p1 {
+        color:white;
+        font-size:20px;
+        text-align:center;
+    }
+    #trapaholic {
+        border:5px solid gold;
+        padding-left:10px;
+        padding-right:10px;
+        margin-bottom:25px;
+        background:navy;
+        margin-right:45%;
+        text-align:center;
+    }
+    #cheeky {
+        border:5px solid gold;
+        padding-left:10px;
+        padding-right:10px;
+        margin-bottom:25px;
+        background:navy;
+        margin-right:45%;
+        text-align:center;
+    }
+    #threehunit {
+        color:gold;
+        font-size:30px;
+        text-shadow: 2px 2px 5px white;
+        padding-bottom:20px;
+        margin-left:19%;
+    }
+    h2 {
+        margin-left:15%;
+        text-shadow: 2px 2px 5px white;
+        color:gold;
+        font-family:georgia;
+        font-size:30px;
+        
+    }

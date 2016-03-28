@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="mainstyle.css">
+	<title>Calculator</title>
+	<style>
+#calcview {
+    text-align:center;
+}
+	</style>
+</head>
+<body>
+    <h1>Calculator</h1>
+     <div id="navbar">
+                    <a href="index.html">About Me</a>
+                    <a href="extras.html">HTML/CSS</a>
+                    <a href="pizzarandomizerproject.html">Pizza Topping Randomizer</a>
+                    <a href="calc.html">Calculator</a>
+                    <a href="modelingpage.html">Run The NBA</a>
+                </div>
+                <div id="calcview">
+<input type ="text" name="input1" style="width:50px;" id="input1">
+    <select id="dropdown">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="x">x</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+        <option value="^">^</option>
+    </select>
+    <input type ="text" name="input2" style="width:50px;" id="input2">
+    <input type="button" value="Calculate" id="submitButton" />
+    <p>The answer is: <span id="display"></span></p>
+<script src="calc.js" ></script>
+</div>
+</body>
+</html>

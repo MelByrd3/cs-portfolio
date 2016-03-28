@@ -1,0 +1,1 @@
+Twilio.callAndSay("650-267-1989", "You just subscribed to Gossip Girl");
