@@ -1,18 +1,10 @@
 // JavaScript File
-
-// The five variables under this comment includes the five position buttons for 
-// all the positions. All of these variables have their own ID, and this ID can 
-// be referred to when creating another code that the button needs in order to 
-// display certain images and names.
 var pointguardButton = document.getElementById("pointguardButton");
 var shootingguardButton = document.getElementById("shootingguardButton");
 var smallforwardButton = document.getElementById("smallforwardButton");
 var powerforwardButton = document.getElementById("powerforwardButton");
 var centerButton = document.getElementById("centerButton");
 
-// Under this comment is the name of NBA Point Guards, and the images of 
-// themselves. These image URL's and names pair up in number so that when a random 
-// number is pulled from the list, both the image and name will come up.
 var pointguards = ["Derrick Rose","Stephen Curry","Mike Conley","Ricky Rubio",
 "Rajon Rondo","John Wall","Russell Westbrook","Kyrie Irving","Chris Paul","Tony Parker",
 "Damien Lillard","Kyle Lowry","Ty Lawson","Kemba Walker","Jeremy Lin","Goran Dragic","Isiah Thomas"];
@@ -26,9 +18,6 @@ var pointGuardsImg = ["http://4.bp.blogspot.com/-B7dQZWbEAsI/TcEG-a4hPVI/AAAAAAA
 "http://media-spacejam.cursecdn.com/avatars/thumbnails/3/283/384/384/p1_5_1718.png","http://media-spacejam.cursecdn.com/avatars/thumbnails/3/236/384/384/p1_17_1555.png",
 "http://media-spacejam.cursecdn.com/avatars/thumbnails/3/311/384/384/p1_1_1750.png"];
 
-// Under this comment is the name of NBA Shooting Guards, and the images of 
-// themselves. These image URL's and names pair up in number so that when a random 
-// number is pulled from the list, both the image and name will come up.
 var shootingguards = ["Kobe Bryant","James Harden","Klay Thompson","Dwayne Wade",
 "DeMar DeRozan","Bradly Beal","Manu Ginobli","Monta Ellis","Wesley Matthews",
 "Eric Gordon","Jason Terry","Tyreke Evans","Dion Waiters","Michael Jordan"];
@@ -40,9 +29,6 @@ var shootingGuardImg = ["http://media-spacejam.cursecdn.com/avatars/thumbnails/3
 "http://i137.photobucket.com/albums/q239/Friartown/JET2.png","http://media-spacejam.cursecdn.com/avatars/thumbnails/3/252/384/384/p1_21_1606.png",
 "http://media-spacejam.cursecdn.com/avatars/thumbnails/3/644/384/384/p1_23_2457.png","http://media-spacejam.cursecdn.com/avatars/thumbnails/3/402/384/384/p1_153_2042.png"];
 
-// Under this comment is the name of NBA Small Forwards, and the images of 
-// themselves. These image URL's and names pair up in number so that when a random 
-// number is pulled from the list, both the image and name will come up.
 var smallforwards = ["Gordon Hayward","Lebron James","Kevin Durant","Kawhi Leonard",
 "Rudy Gay","Carmelo Anthony","Paul George","Andrew Wiggins","Danny Granger",
 "Kyle Korver","Danilo Gallinari","Giannis Antetokounmpo","Larry Bird"];
@@ -54,9 +40,6 @@ var smallForwardImg = ["http://media-spacejam.cursecdn.com/avatars/thumbnails/4/
 "http://media-spacejam.cursecdn.com/avatars/thumbnails/4/286/384/384/p6_235_8856.png","http://media-spacejam.cursecdn.com/avatars/thumbnails/4/50/384/384/p6_219_8617.png",
 "http://2kmtcentral.com/img/players/16/template/players/player-9606.png"];
 
-// Under this comment is the name of NBA Power Forwards, and the images of 
-// themselves. These image URL's and names pair up in number so that when a random 
-// number is pulled from the list, both the image and name will come up.
 var powerforwards = ["Chris Bosh","LaMarcus Aldridge","Dirk Nowitzki","Tim Duncan",
 "Blake Griffin","Kevin Love","Kevin Garnett","Karl Malone"];
 var powerForwardImg = ["http://i137.photobucket.com/albums/q239/Friartown/Bosh.png","http://media-spacejam.cursecdn.com/avatars/thumbnails/4/434/384/384/p6_241_9006.png",
@@ -64,9 +47,6 @@ var powerForwardImg = ["http://i137.photobucket.com/albums/q239/Friartown/Bosh.p
 "http://media-spacejam.cursecdn.com/avatars/thumbnails/3/246/384/384/p1_14_1600.png","http://media-spacejam.cursecdn.com/avatars/thumbnails/4/80/384/384/p6_221_8647.png",
 "http://media-spacejam.cursecdn.com/avatars/thumbnails/4/419/384/384/p6_244_8991.png","http://media-spacejam.cursecdn.com/avatars/thumbnails/3/347/384/384/p2_66_1803.png"];
 
-// Under this comment is the name of NBA Centers, and the images of 
-// themselves. These image URL's and names pair up in number so that when a random 
-// number is pulled from the list, both the image and name will come up.
 var centers = ["DeAndre Jordan","Dwight Howard","Karl-Anthony Towns","Andre Drummond",
 "DeMarcus Cousins","Hassan Whiteside","Jonas Valanciunas","Shaquille O'Neal"];
 var centerImg = ["http://media-spacejam.cursecdn.com/avatars/thumbnails/4/111/384/384/p6_223_8678.png","http://media-spacejam.cursecdn.com/avatars/thumbnails/3/110/384/384/p1_12_1150.png",
@@ -74,9 +54,6 @@ var centerImg = ["http://media-spacejam.cursecdn.com/avatars/thumbnails/4/111/38
 "http://media-spacejam.cursecdn.com/avatars/thumbnails/3/368/384/384/p1_28_1954.png","http://media-spacejam.cursecdn.com/avatars/thumbnails/5/131/384/384/p5_126_10062.png",
 "http://media-spacejam.cursecdn.com/avatars/thumbnails/3/587/384/384/p1_30_2332.png","http://media-spacejam.cursecdn.com/avatars/thumbnails/3/79/384/384/p2_59_948.png"];
 
-// The way that this patch of code works is that when the ID of any position 
-// up, you would need to use the ID of any of the position image. Many of these 
-// postions are modified in the CSS and these images can be seen the HTML.
 var pointGuardimage = document.getElementById("pointGuardimage");
 var shootingGuardimage = document.getElementById("shootingGuardimage");
 var smallForwardimage = document.getElementById("smallForwardimage");
@@ -84,19 +61,12 @@ var powerForwardimage = document.getElementById("powerForwardimage");
 var centerimage = document.getElementById("centerimage");
 // var pointguards = pointguards[Math.floor(Math.random()*pointguards.length)];
 
-// This part of the code is specifically so that when a position name is clicked, 
-// the fuction of randomize will happen. This code also refers back to the buttons 
-// listed in the HTML, CSS and even in the Javascript above.
 pointguardButton.addEventListener("click",randomize);
 shootingguardButton.addEventListener("click",randomize);
 smallforwardButton.addEventListener("click",randomize);
 powerforwardButton.addEventListener("click",randomize);
 centerButton.addEventListener("click",randomize);
 
-// This final patch of code includes the event target ID's and this means that if 
-// a certain target recieved the event of getting clicked, the lists of the clicked 
-// position would go though the equation of randomize and collect both the name 
-// and image of that certain player.
 function randomize(evt){
 
     if  (evt.target.id === "pointguardButton"){

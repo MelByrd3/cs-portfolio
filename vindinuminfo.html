@@ -4,7 +4,209 @@
         <link rel="stylesheet" href="mainstyle.css" type="text/css" />
         <title>Vindinum Info</title>
     </head>
+    
+    <style>
+    h2 {
+        text-align:center;
+        margin-right:13%;
+    }
+    
+    p2 {
+        text-align:center;
+    }
+    code {
+        color:lightblue;
+        font-size:15px;
+    }
+    .explainations {
+    color:white;
+    font-size:20px;
+    font-family:georgia;
+    width: 320px;
+    padding: 10px;
+    border: 5px solid lightblue;
+}
+        </style>
+        
     <body>
-    Vindinum is a AI game where you code
-    </body>
+                <div id="navbar">
+        <a href="index.html">About Me</a>
+        <a href="extras.html">HTML/CSS</a>
+        <a href="pizzarandomizerproject.html">Pizza Topping Randomizer</a>
+        <a href="calc.html">Calculator</a>
+        <a href="modelingpage.html">Run The NBA</a>
+        <a href="vindinuminfo.html">Vindinum</a>
+        </div>
+    <h1>
+        VINDINUM
+        </h1>
+
+    <img src = "http://yveran.gus05.com/images/vindinium/vindinium.jpg" style = "height:300px;width:500px;margin-left:32%;"></img>
+
+    <p>
+        Vindinum is an AI progamming game that has you controlling 
+        your own Artifical Intelligence character, as you collect mines, 
+        regenerate on health, and attack other Artifical Intelligence 
+        characters controlled by other users. The goal of the game is to 
+        make sure that your AI has the most gold by the game's end, 
+        and the only way to claim coins, is by either taking free mines, 
+        or also by stealing enemy mines. Since this is a turned based game, 
+        the 1200 moves are shared amongst all 4 AI characters, each character 
+        having 300 moves.
+        </p>
+        
+    <h2>
+        THE CODING I'VE USED
+        </h2>
+        
+
+    <pre>
+        <code>
+        var task;
+        task = "freemines"
+        task = "taverns"
+        task = "attackenemy"
+        task = "stealmines"
+            </code>
+        </pre>
+        
+    <div class = "explainations">
+    <p2>  
+        This code is the code that is used to list the tasks that are needed to 
+        be done if they were indeed needed
+        </p2>
+        </div>
+        
+    
+    
+    <pre>
+    <code>
+        if(bot.yourBot.life <= 10){
+            task = "taverns";
+        }
+        else if(enemyBots.life <= 10){
+            task = "attackenemy";
+        }
+        else if(bot.yourMines <=1/2){
+            task = "stealmines"
+        }
+        else {
+            task = "freemines";
+        }
+        </code>
+        </pre>
+    <div class = "explainations">
+    <p3>
+        This code talks about how my bot does his actions in the specific order 
+        I put it in. It says that if my bot's life is 10 or under 10, I must go 
+        to a tavern to refuel on health. If that is not the case, my bot will 
+        attack another bot whos helath is, or is under 10. The other command my 
+        bot has is to steal any mines if there are mines that need stealing in 
+        order to make my coins while taking away other bot's coins. My final 
+        command for my bot, is to take freemines that aren't already owned.
+        </p3>
+        </div>
+        
+        
+        
+    <pre>
+    <code>
+        if(task === "freemines") {
+            var closestMine = bot.freeMines[0];
+            for( i = 0; i < bot.freeMines.length; i++) {
+                if(bot.findDistance(myPos, closestMine) > bot.findDistance(myPos, bot.freeMines[i])) {
+                    closestMine = bot.freeMines[i];
+                }
+            }
+            console.log("Claiming a Free Mine!");
+            myDir = bot.findPath(myPos, closestMine);
+        }
+        </code>
+        </pre>    
+    <div class = "explainations">
+    <p4>
+        This code is telling my bot what exactly to do, when gathering freemines 
+        is needed to be done. If gathering freemines needs to be done, my code 
+        tells my bot to look for the closest mine and to walk to it. When the 
+        walking is done, the code tells my bot take any freemines that are up 
+        for grabs.
+        </p4>
+        </div>
+        
+        
+        
+    <pre>
+    <code>
+        if(task === "taverns") {
+            var closestTavern = bot.freetaverns[0];
+            for(i = 0; i < bot.Taverns.length; i++) {
+                if(bot.findDistance( MyPos, closestTavern) > bot.findDistance(myPos, bot.taverns[i])) {
+                }
+            }
+            console.log("Refueling on Health!");
+            myDir = bot.findPath(myPos, closestTavern);
+        }
+        </code>
+        </pre>
+    <div class = "explainations">
+    <p5>
+        Once the my health is on 10 or under 10, this command gets cued, and this 
+        code tells my bot exactly what to do if my health is on or under 10. The 
+        code refers to my bot, and says that he will need to go to a tavern in
+        order to heal up.
+        </p5>
+        
+        </div>
+        
+        
+        
+        
+    <pre>
+    <code>
+        if(task === "attackenemy") {
+            var closestBot = enemyBots[0];
+            for(i = 0; i < enemyBots.length; i++) {
+                if(bot.findDistance(myPos, [closestBot.pos.x, closestBot.pos.y]) > bot.findDistance(myPos, [enemyBots[i].pos.x, enemyBots[i].pos.y])){
+                closestBot = enemyBots[i]
+                }
+            }
+            console.log("Attacking the Enemy!");
+            myDir = bot.findPath(myPos, closestBot);
+        }
+        </code>
+        </pre>
+    <div class = "explainations">
+    <p6>
+        This code is a simple code for attacking an enemy if their health is 
+        or is under 10. It will find the other bot by using the "X" and "Y" 
+        coordinates in order to find the position of the other bot. Once done, 
+        the code says to attack the person needed to be attacked and ended.
+        </p6>
+        </div>
+
+
+
+    <pre>
+    <code>
+        if(task === "stealmines") {
+            var closestMine = enemyMines[0];
+            for(i = 0; i < enemyMines.length; i++) {
+                if(bot.findDistance(myPos, [closestMine.pos.x, closestMine.pos.y]) > bot.findDistance(myPos, [enemyMines[i].pos.x, enemyMines[i].pos.y])){
+                closestMine = enemyMines[i]
+                }
+            }
+            console.log("Stealing a Mine!");
+            myDir = bot.findPath(myPos, closestMine);
+        }
+        </code>
+        </pre>
+    <div class = "explainations">
+    <p7>
+        This final code is the "steal mine" command that tells my bot to steal 
+        any mines that are owned by another bot. I haven't fully finshed my code 
+        for this portion of my bot yet, but I hope to solve the issues I am 
+        having with the "steal mines" command.
+        </p7>
+        </div>
+        </body>
 </html>
