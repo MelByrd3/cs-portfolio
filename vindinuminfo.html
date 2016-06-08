@@ -73,7 +73,10 @@
     <div class = "explainations">
     <p2>  
         This code is the code that is used to list the tasks that are needed to 
-        be done if they were indeed needed
+        be done if they were needed. All of the tasks are captured in a variable 
+        named task, and this because all of the tasks are their own independent 
+        variable and the best way to label that is by grouping them as a group 
+        instead of having them as seprate variables.
         </p2>
         </div>
         
@@ -103,7 +106,10 @@
         attack another bot whos helath is, or is under 10. The other command my 
         bot has is to steal any mines if there are mines that need stealing in 
         order to make my coins while taking away other bot's coins. My final 
-        command for my bot, is to take freemines that aren't already owned.
+        command for my bot, is to take freemines that aren't already owned. 
+        Trouble that I have within this code is that freemines is my bot's last 
+        priority, but if the task of freemines were to move higher in the "else 
+        if" list, it would become a higher priority for my bot.
         </p3>
         </div>
         
@@ -129,7 +135,9 @@
         is needed to be done. If gathering freemines needs to be done, my code 
         tells my bot to look for the closest mine and to walk to it. When the 
         walking is done, the code tells my bot take any freemines that are up 
-        for grabs.
+        for grabs. There is also a variable within this patch of code, and that 
+        is because the variable "closestMine" needs to be identified to help 
+        move the bot to the area of the closest mine.
         </p4>
         </div>
         
@@ -153,7 +161,10 @@
         Once the my health is on 10 or under 10, this command gets cued, and this 
         code tells my bot exactly what to do if my health is on or under 10. The 
         code refers to my bot, and says that he will need to go to a tavern in
-        order to heal up.
+        order to heal up. This patch of code includes the code "myDir = bot.findPath(myPos, closestTavern)",
+        and that part of code means that the direction my bot will be taking will 
+        be towards the closest tavern. Once at the tavern, the code of "for(i = 0; i < bot.Taverns.length; i++)" 
+        says that my bot will have to refuel on health once at the tavern.
         </p5>
         
         </div>
@@ -177,10 +188,13 @@
         </pre>
     <div class = "explainations">
     <p6>
-        This code is a simple code for attacking an enemy if their health is 
-        or is under 10. It will find the other bot by using the "X" and "Y" 
+        This patch of code is a simple way for asking the bot to attack an enemy
+        if they're closest to you. It will find the other bot by using the "X" and "Y" 
         coordinates in order to find the position of the other bot. Once done, 
-        the code says to attack the person needed to be attacked and ended.
+        the code says to attack the bot closest to my location. I use the variable
+        of "enemyBots" to help my bot identify enemy bots around me, and just like 
+        the other two commands, this command says to find path to the enemy bot 
+        instead of a unclaimed mine or tavern.
         </p6>
         </div>
 
@@ -203,9 +217,12 @@
     <div class = "explainations">
     <p7>
         This final code is the "steal mine" command that tells my bot to steal 
-        any mines that are owned by another bot. I haven't fully finshed my code 
-        for this portion of my bot yet, but I hope to solve the issues I am 
-        having with the "steal mines" command.
+        any mines that are owned by another bot. This patch of code also follows 
+        the other three commands, but sadly, I haven't fully finshed my code 
+        for this portion of my bot yet. Once the coding for this patch of my AI's
+        JavaScript is done, I hope to be able to take mines from enemies as one 
+        of the last priorities. I also feel like getting this code correct will 
+        make my bot more effective all around.
         </p7>
         </div>
         </body>
